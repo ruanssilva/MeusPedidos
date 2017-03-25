@@ -1,0 +1,138 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+.header-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.49),rgba(0, 0, 0, 0.89)),url('https://images.unsplash.com/1/iphone-4-closeup.jpg?dpr=1&auto=format&crop=middle&fit=crop&w=2000&h=700&q=80');
+}
+.hero.is-large .hero-body {
+  padding-bottom: 100px!important;
+  padding-top: 100px!important;
+}
+.is-outlined {
+  background-color:transparent;
+  color:#fff;
+}
+.hero-cta {
+  padding: 30px 0;
+}
+.panel-block.section p {
+  font-size: 17px;
+  line-height: 1.4;
+  color:#95A5A6;
+}
+.section.main {
+  background-color:#F0F0F0;
+}
+.icon-block {
+  font-size:5em;
+}
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+.logo {
+
+}
+.logo img {
+  width:120px;
+}
+.container {
+  padding-top:50px;
+  max-width: 968px;
+}
+.section {
+  border: 1px solid #efefef;
+  border-radius: 5px;
+}
+.status-header {
+  padding: 40px 40px 80px 40px;
+}
+.status-header .indicator {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin-right: 20px;
+  background: #17d766;
+  background: -moz-linear-gradient(top,  #17d766 0%, #17d766 50%, #16cf62 51%, #16cf62 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#17d766), color-stop(50%,#17d766), color-stop(51%,#16cf62), color-stop(100%,#16cf62));
+  background: -webkit-linear-gradient(top,  #17d766 0%,#17d766 50%,#16cf62 51%,#16cf62 100%);
+  background: -ms-linear-gradient(top,  #17d766 0%,#17d766 50%,#16cf62 51%,#16cf62 100%);
+  background: linear-gradient(to bottom,  #17d766 0%,#17d766 50%,#16cf62 51%,#16cf62 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17d766', endColorsGradientType=0);
+  opacity: 0.8;
+  filter:alpha(opacity=80);
+}
+.status-header .title {
+  display: inline-block;
+}
+.status-header .subtitle {
+  display: block;
+  margin-left: 35px;
+}
+.status-uptime {
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding: 15px 95px 0 95px;
+  margin: 0 -20px -20px -20px;
+}
+.status-uptime .title {
+  display: inline-block;
+  font-size: 14px;
+  color: #bbb;
+}
+.status-uptime .uptime {
+  display: inline-block;
+  margin-left: 60px;
+  font-size: 14px;
+  color: #bbb;
+}
+.status-list {
+  padding:0px;
+}
+.status-list .label {
+  font-size: 16px;
+  font-weight: bold;
+}
+.status-list .amount {
+  font-size: 16px;
+  font-weight: bold;
+  color: #bbb;
+}
+.status-tweets {
+}
+.status-tweets .twitter {
+  padding: 0 15px 15px 15px;
+  margin: -20px -20px 50px -20px;
+  border-bottom: 1px solid #efefef;
+}
+.status-tweets .icon {
+  display: inline-block;
+  padding-left:20px;
+  color: #11bff2;
+}
+.status-tweets .username {
+  display: inline-block;
+  padding-left: 30px;
+}
+.status-tweets .updates {
+  padding: 0 40px 40px 40px;
+}
+.status-tweets .update {
+  padding-top: 40px;
+}
+.status-tweets .update .timestamp {
+  font-weight: bold;
+  color: #bbb;
+}
+.status-tweets .updates .event {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.status-footer {
+  padding-left: 20px;
+}
+.status-footer a {
+  padding: 0 10px;
+}

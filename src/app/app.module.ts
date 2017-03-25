@@ -5,16 +5,27 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+// import { ReactiveFormsModule } from '@angular/forms';  // <-- #1 import module
+
+import { ConhecimentoService } from './services/conhecimento.service';
+import { CandidatoService } from './services/candidato.service';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+
+    // ReactiveFormsModule,
+
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    ConhecimentoService,
+    CandidatoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

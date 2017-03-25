@@ -1,3 +1,104 @@
-<h1>
-  {{title}}
-</h1>
+<div *ngIf="formulario" class="columns">
+  <div class="column">
+
+  </div>
+  <div class="column">
+
+    <div *ngIf="!respostas.length">
+
+      <h1 class="title is-3 has-text-left">Precisamos de seus dados para contato</h1>
+
+      <br/>
+
+      <div class="columns">
+        <div class="column">
+          <div class="field">
+            <label class="label">Nome</label>
+            <p class="control">
+              <input [(ngModel)]="candidato.Nome" [ngClass]="{'is-danger': errorinnome }" class="input" type="text" placeholder="Fulando da Silva">
+            </p>
+            <p *ngIf="errorinnome" class="help is-danger">Muito curto o nome</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <label class="label">E-mail</label>
+            <p class="control has-icon has-icon-right">
+              <input [(ngModel)]="candidato.Email" [ngClass]="{'is-danger': errorinemail }" class="input" type="text" placeholder="fulando@provedor.com" value="bulma">
+            </p>
+            <p *ngIf="errorinemail"  class="help is-danger">Este e-mail não é válido</p>
+          </div>
+        </div>
+      </div>
+
+      <a (click)="pesquisa()" [ngClass]="{'is-loading': aguardando }" class="button is-info">Próximo</a>
+
+    </div>
+
+
+    <div *ngIf="respostas.length">
+
+      <h1 *ngIf="!confirmado && !aguardando" class="title is-3 has-text-left">{{ candidato.Nome }}, agora sobre suas habilidades</h1>
+      <h1 *ngIf="confirmado" class="title is-3 has-text-left">{{ candidato.Nome }}, agora é só esperar</h1>
+      <h1 *ngIf="aguardando" class="title is-3 has-text-left">{{ candidato.Nome }}, estamos analisando o seu perfil</h1>
+
+      <br/>
+
+      <div *ngIf="atualizacao">
+        
+        <div class="notification is-primary">
+          Já foi identificado o seu cadastro. Aprendeu coisas novas? <b>Atualizar aí!</b>
+        </div>
+
+        <br/>
+
+      </div>
+
+      <div class="status-list">
+        <div *ngFor="let c of respostas" class="api">
+          <div class="label">
+            {{ c.Conhecimento }}
+            <div *ngIf="!confirmado && !aguardando" class="amount has-text-centered">desconheço
+              <input [(ngModel)]="c.Pontos" type="range" min="0" max="10" value="{{c.Pontos}}" /> sou ninja
+            </div>
+          </div>
+          <div class="bar">
+            <progress class="progress is-success" value="{{ c.Pontos }}" max="10">99%</progress>
+          </div>
+          <div class="amount has-text-centered">conhecimento de {{ (c.Pontos/10)*100 }}%</div>
+          <hr/>
+        </div>
+      </div>
+
+      <a *ngIf="!confirmado" [ngClass]="{'is-loading': aguardando }" (click)="envia()" class="button is-success">Enviar</a>
+
+      <div *ngIf="confirmado">
+        
+        <div class="notification is-success">
+          Em instantes você receberá um e-mail. <b>Obrigado por se candidatar! :))</b>
+        </div>
+
+        <a (click)="inicia()" class="button">voltar para o começo</a>
+
+        <br/>
+
+        
+
+      </div>
+
+    </div>
+
+
+    <br/>
+
+
+  </div>
+  <div class="column">
+
+  </div>
+</div>
+
+
+<div *ngIf="!formulario" class="has-text-centered">
+  <p class="title">Quer fazer parte da nossa equipe? <a (click)="inicia()" class="button is-dark"><span>Sim</span></a> ou <a (click)="inicia()" class="button is-danger"><span>Claro!</span></a></p>
+</div>
